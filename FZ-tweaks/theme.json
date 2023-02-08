@@ -1,0 +1,10 @@
+{
+  "name": "FZ Tweaks",
+  "description": "System wide performance tweaks",
+  "version": "v1.0",
+  "target": "Tweak",
+  "manifest_version": 4,
+  "inject": {
+    "shared.css": ["SP", "MainMenu", "QuickAccess"]
+  },
+}

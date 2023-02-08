@@ -1,0 +1,120 @@
+/*
+variables information:
+
+--qm* = quick menu variables
+--mm* = main menu variables
+--sm* = Steam menu (some call it main menu)
+*/ 
+
+/*
+__________
+QUICK MENU
+*/
+
+:root {
+  --qm-container-anim: 70ms;
+}
+
+/*Quick Menu transition (container)*/
+.quickaccessmenu_Up_1GhPw>.quickaccessmenu_ContentTransition_32AON.quickaccessmenu_EnterActive_3pxdH {
+  transition-property: opacity !important;
+  transition-delay: var(--qm-container-anim) !important;
+}
+
+.quickaccessmenu_Down_3rR0o>.quickaccessmenu_ContentTransition_32AON.quickaccessmenu_EnterActive_3pxdH {
+  transition-property: opacity !important;
+  transition-delay: var(--qm-container-anim) !important;
+}
+
+.quickaccessmenu_Up_1GhPw>.quickaccessmenu_ContentTransition_32AON.quickaccessmenu_ExitActive_3repy {
+  transition-duration: var(--qm-container-anim) !important;
+}
+
+.quickaccessmenu_Down_3rR0o>.quickaccessmenu_ContentTransition_32AON.quickaccessmenu_ExitActive_3repy {
+  transition-duration: var(--qm-container-anim) !important;
+}
+
+/*
+_________
+MAIN MENU
+*/
+
+:root {
+  --mm-menu-blur: blur(5px);
+  --mm-tabbed-anim: 80ms;
+  --mm-scroll-menu-anim: 80ms; 
+}
+
+/* background blur when a menu is focused */
+.backgroundglass_BackgroundGlass_3rsrz.backgroundglass_Blur_N9sQL {
+  backdrop-filter: var(--mm-menu-blur) !important;
+}
+
+/* don't transform audio popup */
+/* TODO: add an option to use opacity to make it a little more smooth */
+.audio_VolumePopinHidden_1OwmL {
+  transform: none !important;
+  opacity: 0;
+}
+.audio_VolumePopin_2iUUM {
+  transition-property: none !important;
+}
+
+/* remove dynamic background image from main menu */
+.gamepadhomerecentgames_RecentGamesBackgroundImage_3Mp8R {
+  display: none !important;
+  transition-property: none !important;
+}
+
+/* Remove "Recent Games" title */
+.gamepadhomerecentgames_RecentGamesHeader_35iRe {
+  display: none !important;
+}
+
+/* menus */
+/*
+more efficient transition
+It's still fairly slow but that is probably due to the backend
+ */
+.gamepadtabbedpage_Left_3lSTy>.gamepadtabbedpage_ContentTransition_L_ehQ.gamepadtabbedpage_EnterActive_3lqCS {
+  transition-property: opacity !important;
+  transition-delay: var(--mm-tabbed-anim) !important;
+}
+.gamepadtabbedpage_Right_1-jlW>.gamepadtabbedpage_ContentTransition_L_ehQ.gamepadtabbedpage_EnterActive_3lqCS {
+  transition-property: opacity !important;
+  transition-delay: var(--mm-tabbed-anim) !important;
+}
+.gamepadtabbedpage_Left_3lSTy>.gamepadtabbedpage_ContentTransition_L_ehQ.gamepadtabbedpage_ExitActive_1V17j {
+  transition-duration: var(--mm-tabbed-anim) !important;
+}
+.gamepadtabbedpage_Right_1-jlW>.gamepadtabbedpage_ContentTransition_L_ehQ.gamepadtabbedpage_ExitActive_1V17j {
+  transition-duration: var(--mm-tabbed-anim) !important;
+}
+
+/* settings menu */
+
+.gamepadpagedsettings_Up_3Qp0k>.gamepadpagedsettings_ContentTransition_NCmol.gamepadpagedsettings_EnterActive_1JBp4 {
+  transition-property: opacity !important;
+  transition-delay: var(--mm-scroll-menu-anim) !important;
+}
+.gamepadpagedsettings_Down_37IKR>.gamepadpagedsettings_ContentTransition_NCmol.gamepadpagedsettings_EnterActive_1JBp4 {
+  transition-property: opacity !important;
+  transition-delay: var(--mm-scroll-menu-anim) !important;
+}
+
+.gamepadpagedsettings_Up_3Qp0k>.gamepadpagedsettings_ContentTransition_NCmol.gamepadpagedsettings_ExitActive_1fljM {
+  transition-duration: var(--mm-scroll-menu-anim) !important;
+}
+.gamepadpagedsettings_Down_37IKR>.gamepadpagedsettings_ContentTransition_NCmol.gamepadpagedsettings_ExitActive_1fljM {
+  transition-duration: var(--mm-scroll-menu-anim) !important;
+}
+
+/* Remove discover queue widget (at least try to) */
+/* Breaks the UX
+
+.gamepadhomerecommended_DiscoveryQueueWidgetCtn_2bLlN {
+  display: none !important;
+}
+*/
+
+/* TODO: Try to make grid faster */

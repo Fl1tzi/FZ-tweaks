@@ -1,2 +1,3 @@
-# fz-theme
-Make your Steamdeck run faster than ever in a more simplistic UI
+# FZ tweaks
+
+These are performance tweaks which try to reduce some of the animation issues
